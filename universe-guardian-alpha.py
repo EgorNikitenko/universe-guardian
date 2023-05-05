@@ -67,16 +67,16 @@ class Label(Area):
 
 # спрайт
 
-main = Picture('main.png', 140, 200, 670, 117)
+main = Picture('images/main.png', 140, 200, 670, 117)
 
-gun = Picture('gun.png', 210, 410, 80, 100)
-enemy = Picture('enemy.png', 200, 5, 10, 10)
-bg = Picture('space.png', 0, 0, 10, 10)
-gg = Picture('gameover.png', 140, 50, 10, 10)
-restart = Picture('restart.png', 140, 250, 275, 92)
-quit1 = Picture('quit.png', 140, 330, 154, 117)
-youwin = Picture('youwin.png', 110, 100, 319, 101)
-play = Picture('play.png', 140, 100, 167, 117)
+gun = Picture('images/gun.png', 210, 410, 80, 100)
+enemy = Picture('images/enemy.png', 200, 5, 10, 10)
+bg = Picture('images/space.png', 0, 0, 10, 10)
+gg = Picture('images/gameover.png', 140, 50, 10, 10)
+restart = Picture('images/restart.png', 140, 250, 275, 92)
+quit1 = Picture('images/quit.png', 140, 330, 154, 117)
+youwin = Picture('images/youwin.png', 110, 100, 319, 101)
+play = Picture('images/play.png', 140, 100, 167, 117)
 
 # управление кораблём
 
@@ -117,7 +117,7 @@ def render_enemies():
         y = start_y + 70 * i
 
         for j in range(enemies_per_row):
-            m = Picture('enemy.png', x, y, 60, 60)
+            m = Picture('images/enemy.png', x, y, 60, 60)
             monsters.append(m)
             x += 63.5
 
@@ -188,8 +188,8 @@ while True:
 
             if wait == 0:
                 m = random.choice(monsters)
-                projectilem = Picture('projectilem.png', m.rect.x + 2, m.rect.y + 23, 10, 10)
-                projectilem2 = Picture('projectilem.png', m.rect.x + 42, m.rect.y + 23, 10, 10)
+                projectilem = Picture('images/projectilem.png', m.rect.x + 2, m.rect.y + 23, 10, 10)
+                projectilem2 = Picture('images/projectilem.png', m.rect.x + 42, m.rect.y + 23, 10, 10)
                 bullets_monsters.append(projectilem)
                 bullets_monsters.append(projectilem2)
 
@@ -295,8 +295,8 @@ while True:
 
                     if event.key == pygame.K_SPACE and len(bullets) <= 2:
                         pygame.mixer.Sound.play(shoot_sound)
-                        projectile = Picture('projectile.png', gun.rect.x + 13, gun.rect.y + 23, 10, 10)
-                        projectile1 = Picture('projectile.png', gun.rect.x + 57, gun.rect.y + 23, 10, 10)
+                        projectile = Picture('images/projectile.png', gun.rect.x + 13, gun.rect.y + 23, 10, 10)
+                        projectile1 = Picture('images/projectile.png', gun.rect.x + 57, gun.rect.y + 23, 10, 10)
 
                         bullets.append(projectile)
                         bullets.append(projectile1)
